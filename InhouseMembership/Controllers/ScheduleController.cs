@@ -34,6 +34,7 @@ namespace InhouseMembership.Controllers
         {
 
             var scheduleList = await _context.Schedules.ToListAsync();
+
                  
             // ensure the coach logged in can only see the upcoming schedule that is hosted by himself
             if (User.IsInRole("Coach"))
@@ -56,8 +57,18 @@ namespace InhouseMembership.Controllers
                 return NotFound();
             }
 
+
             var schedule = await _context.Schedules
                 .FirstOrDefaultAsync(m => m.ScheduleId == id);
+            // find the enrolled members of the schedule
+            var enrolledMembers =  _context.Enrollments.Where(e => e.ScheduleId == id).ToListAsync().Result;
+            schedule.Enrollments = enrolledMembers;
+            foreach (Enrollment enrollment in schedule.Enrollments)
+            {
+                enrollment.Member = _userManager.FindByIdAsync(enrollment.MemberId).Result;
+            }
+
+            Console.WriteLine("enrollments: " + schedule.Enrollments);
             if (schedule == null)
             {
                 return NotFound();

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\GitHub\\HIT339Assignment2\\InhouseMembership\\InhouseMembership.csproj": {}
+    "H:\\GitHub\\HIT339_Assignment_2\\InhouseMembership\\InhouseMembership.csproj": {}
   },
   "projects": {
-    "H:\\GitHub\\HIT339Assignment2\\InhouseMembership\\InhouseMembership.csproj": {
+    "H:\\GitHub\\HIT339_Assignment_2\\InhouseMembership\\InhouseMembership.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\GitHub\\HIT339Assignment2\\InhouseMembership\\InhouseMembership.csproj",
+        "projectUniqueName": "H:\\GitHub\\HIT339_Assignment_2\\InhouseMembership\\InhouseMembership.csproj",
         "projectName": "InhouseMembership",
-        "projectPath": "H:\\GitHub\\HIT339Assignment2\\InhouseMembership\\InhouseMembership.csproj",
+        "projectPath": "H:\\GitHub\\HIT339_Assignment_2\\InhouseMembership\\InhouseMembership.csproj",
         "packagesPath": "C:\\Users\\Zengq\\.nuget\\packages\\",
-        "outputPath": "H:\\GitHub\\HIT339Assignment2\\InhouseMembership\\obj\\",
+        "outputPath": "H:\\GitHub\\HIT339_Assignment_2\\InhouseMembership\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Zengq\\AppData\\Roaming\\NuGet\\NuGet.Config",

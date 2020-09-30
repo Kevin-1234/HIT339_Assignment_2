@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RKNl0lqqJShv9OdaS+O2P+nbj7rd8VIFGQ8kTrcvjQXu0zAYoGviHcWuBHvPPWvmAi2ag/1eHlrcxxiTR7zOIg==",
+  "dgSpecHash": "PX9LJqGUzijNzpfSwWUfvTtcicPTSLSMMZuWgwj+HcTBJuvKkxpxDo7DptSKe0bi8P/BRmSAD0g4Zgepz+sEJg==",
   "success": true,
-  "projectFilePath": "H:\\GitHub\\HIT339Assignment2\\InhouseMembership\\InhouseMembership.csproj",
+  "projectFilePath": "H:\\GitHub\\HIT339_Assignment_2\\InhouseMembership\\InhouseMembership.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Zengq\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.6\\microsoft.aspnetcore.cryptography.internal.3.1.6.nupkg.sha512",
     "C:\\Users\\Zengq\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.6\\microsoft.aspnetcore.cryptography.keyderivation.3.1.6.nupkg.sha512",
