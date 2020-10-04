@@ -11,30 +11,30 @@
 }
 <h1>Details</h1>
 
-<div>
+<div class="card-body bg-secondary">
     <h4>Schedule</h4>
     <hr />
     <dl class="row">
 
-        <dt class="col-sm-2">
+        <dt class="col-sm-2 text-white">
             @Html.DisplayNameFor(model => model.EventName)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.EventName)
         </dd>
-        <dt class="col-sm-2">
+        <dt class="col-sm-2 text-white">
             @Html.DisplayNameFor(model => model.EventDate)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.EventDate)
         </dd>
-        <dt class="col-sm-2">
+        <dt class="col-sm-2 text-white">
             @Html.DisplayNameFor(model => model.Location)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Location)
         </dd>
-        <dt class="col-sm-2">
+        <dt class="col-sm-2 text-white">
             Enrolled members
         </dt>
         <dd class="col-sm-10">
@@ -50,18 +50,18 @@
 
         @if (!User.IsInRole("Coach"))
         {
-            <dt class="col-sm-2">
+            <dt class="col-sm-2 text-white">
                 Coach Name
             </dt>
             <!-- get the coach name by passing coach id into UserManager -->
             <dd class="col-sm-10">
-                <a asp-action="CoachProfile" asp-route-id="@Model.CoachId">(Click the name to see the profile >) @Html.DisplayFor(model => UserManager.FindByIdAsync(model.CoachId).Result.UserName)</a>
+                <a asp-action="CoachProfile" asp-route-id="@Model.CoachId" class="text-white btn-dark">(Click the name to see the profile >) @Html.DisplayFor(model => UserManager.FindByIdAsync(model.CoachId).Result.UserName)</a>
             </dd>
         }
 
     </dl>
 </div>
-<div>
+<div class="text-white">
     <!-- if the event time is before current time, show the event has ended -->
     @if (User.IsInRole("Member"))
     {
@@ -84,8 +84,8 @@
         {
             <h3>(Event has ended!)</h3>
         }
-        <a asp-action="Edit" asp-route-id="@Model.ScheduleId">Edit</a>
-        <a asp-action="Index">Back to List</a>
+        <a asp-action="Edit" asp-route-id="@Model.ScheduleId" class="text-white btn-dark">Edit</a>
+        <a asp-action="Index" class="text-white btn-dark">Back to List</a>
     }
 
 </div>

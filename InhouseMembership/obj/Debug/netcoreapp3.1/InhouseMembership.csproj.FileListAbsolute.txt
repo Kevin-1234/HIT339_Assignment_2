@@ -870,9 +870,6 @@ C:\Users\mslaf\Documents\HIT339_Assignment_2\InhouseMembership\bin\Debug\netcore
 C:\Users\mslaf\Documents\HIT339_Assignment_2\InhouseMembership\obj\Debug\netcoreapp3.1\InhouseMembership.csprojAssemblyReference.cache
 C:\Users\mslaf\Documents\HIT339_Assignment_2\InhouseMembership\obj\Debug\netcoreapp3.1\InhouseMembership.AssemblyInfoInputs.cache
 C:\Users\mslaf\Documents\HIT339_Assignment_2\InhouseMembership\obj\Debug\netcoreapp3.1\InhouseMembership.AssemblyInfo.cs
-C:\Users\mslaf\Documents\HIT339_Assignment_2\InhouseMembership\obj\Debug\netcoreapp3.1\InhouseMembership.csproj.CoreCompileInputs.cache
-C:\Users\mslaf\Documents\HIT339_Assignment_2\InhouseMembership\obj\Debug\netcoreapp3.1\InhouseMembership.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\mslaf\Documents\HIT339_Assignment_2\InhouseMembership\obj\Debug\netcoreapp3.1\InhouseMembership.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\mslaf\Documents\HIT339_Assignment_2\InhouseMembership\obj\Debug\netcoreapp3.1\InhouseMembership.RazorAssemblyInfo.cache
 C:\Users\mslaf\Documents\HIT339_Assignment_2\InhouseMembership\obj\Debug\netcoreapp3.1\InhouseMembership.RazorAssemblyInfo.cs
 C:\Users\mslaf\Documents\HIT339_Assignment_2\InhouseMembership\obj\Debug\netcoreapp3.1\InhouseMembership.TagHelpers.input.cache
@@ -954,3 +951,12 @@ C:\Users\mslaf\Documents\HIT339_Assignment_2\InhouseMembership\obj\Debug\netcore
 C:\Users\mslaf\Documents\HIT339_Assignment_2\InhouseMembership\obj\Debug\netcoreapp3.1\InhouseMembership.dll
 C:\Users\mslaf\Documents\HIT339_Assignment_2\InhouseMembership\obj\Debug\netcoreapp3.1\InhouseMembership.pdb
 C:\Users\mslaf\Documents\HIT339_Assignment_2\InhouseMembership\obj\Debug\netcoreapp3.1\InhouseMembership.genruntimeconfig.cache
+C:\Users\mslaf\Documents\HIT339_Assignment_2\InhouseMembership\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\mslaf\Documents\HIT339_Assignment_2\InhouseMembership\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\mslaf\Documents\HIT339_Assignment_2\InhouseMembership\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\mslaf\Documents\HIT339_Assignment_2\InhouseMembership\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\mslaf\Documents\HIT339_Assignment_2\InhouseMembership\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\mslaf\Documents\HIT339_Assignment_2\InhouseMembership\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\mslaf\Documents\HIT339_Assignment_2\InhouseMembership\obj\Debug\netcoreapp3.1\InhouseMembership.csproj.CoreCompileInputs.cache
+C:\Users\mslaf\Documents\HIT339_Assignment_2\InhouseMembership\obj\Debug\netcoreapp3.1\InhouseMembership.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\mslaf\Documents\HIT339_Assignment_2\InhouseMembership\obj\Debug\netcoreapp3.1\InhouseMembership.MvcApplicationPartsAssemblyInfo.cache
