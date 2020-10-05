@@ -31,15 +31,21 @@ namespace InhouseMembership.Controllers
         [Authorize(Roles = "Admin, Coach, Member")]
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.CoachProfiles.Include(c => c.Coach);
-            return View(await applicationDbContext.ToListAsync());
+
+            var coaches = await _userManager.GetUsersInRoleAsync("Coach");
+
+            // pass the coaches to Index view page
+            return View("Index", coaches);
+            //var applicationDbContext = _context.CoachProfiles.Include(c => c.Coach);
+
+            //return View(await applicationDbContext.ToListAsync());
         }
 
 
         // GET: CoachProfile/Details/5
         // this action shows coach profile
         [Authorize(Roles = "Admin, Coach, Member")]
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(string? id)
         {
 
             CoachProfile coachProfile = new CoachProfile();
@@ -63,7 +69,12 @@ namespace InhouseMembership.Controllers
             {
                 coachProfile = await _context.CoachProfiles
                            .Include(c => c.Coach)
-                           .FirstOrDefaultAsync(m => m.CoachProfileId == id);
+                           .FirstOrDefaultAsync(m => m.CoachId == id);
+                if (coachProfile == null)
+                {
+                    Console.WriteLine("profile empty");
+                    return RedirectToAction("NoProfile");
+                }
             }
 
           return View(coachProfile);
