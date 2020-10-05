@@ -33,12 +33,9 @@ namespace InhouseMembership.Controllers
         {
 
             var coaches = await _userManager.GetUsersInRoleAsync("Coach");
-
             // pass the coaches to Index view page
             return View("Index", coaches);
-            //var applicationDbContext = _context.CoachProfiles.Include(c => c.Coach);
 
-            //return View(await applicationDbContext.ToListAsync());
         }
 
 
