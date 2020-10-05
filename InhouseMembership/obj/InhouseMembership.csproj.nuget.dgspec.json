@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mslaf\\Documents\\HIT339_Assignment_2\\InhouseMembership\\InhouseMembership.csproj": {}
+    "H:\\GitHub\\HIT339_Assignment_2\\InhouseMembership\\InhouseMembership.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mslaf\\Documents\\HIT339_Assignment_2\\InhouseMembership\\InhouseMembership.csproj": {
+    "H:\\GitHub\\HIT339_Assignment_2\\InhouseMembership\\InhouseMembership.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mslaf\\Documents\\HIT339_Assignment_2\\InhouseMembership\\InhouseMembership.csproj",
+        "projectUniqueName": "H:\\GitHub\\HIT339_Assignment_2\\InhouseMembership\\InhouseMembership.csproj",
         "projectName": "InhouseMembership",
-        "projectPath": "C:\\Users\\mslaf\\Documents\\HIT339_Assignment_2\\InhouseMembership\\InhouseMembership.csproj",
-        "packagesPath": "C:\\Users\\mslaf\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mslaf\\Documents\\HIT339_Assignment_2\\InhouseMembership\\obj\\",
+        "projectPath": "H:\\GitHub\\HIT339_Assignment_2\\InhouseMembership\\InhouseMembership.csproj",
+        "packagesPath": "C:\\Users\\Zengq\\.nuget\\packages\\",
+        "outputPath": "H:\\GitHub\\HIT339_Assignment_2\\InhouseMembership\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mslaf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Zengq\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -91,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
