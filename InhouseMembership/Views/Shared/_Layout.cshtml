@@ -11,38 +11,37 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
-<body>
+<body style="background-color: #DBE1D3;">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top .navbar-collapse.collapse">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">InhouseMembership</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                     <partial name="_LoginPartial" />
-                    <ul class="navbar-nav flex-grow-1">
+                    <ul class="nav navbar-nav">
 
                         <!-- if the user is admin, show schedules, admins, coaches, members and enrollments at the navigation bar -->
                         @if (User.IsInRole("Admin"))
                         {
 
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Schedule" asp-action="Index">Schedules</a>
+                                <a class="nav-link" asp-area="" asp-controller="Schedule" asp-action="Index">Schedules</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="GetAdmins">Admins</a>
+                                <a class="nav-link" asp-area="" asp-controller="User" asp-action="GetAdmins">Admins</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="GetCoaches">Coaches</a>
+                                <a class="nav-link" asp-area="" asp-controller="User" asp-action="GetCoaches">Coaches</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="GetMembers">Members</a>
+                                <a class="nav-link" asp-area="" asp-controller="User" asp-action="GetMembers">Members</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Enrollment" asp-action="Index">Enrollments</a>
+                                <a class="nav-link" asp-area="" asp-controller="Enrollment" asp-action="Index">Enrollments</a>
                             </li>
 
                         }
@@ -51,14 +50,14 @@
                         {
                             <!-- if the user is a coach, show the options to CRUD his own profile, and see upcoming schedules that is hosted by himself and enrolled members to those evets -->
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="CoachProfile" asp-action="Details">My Profile</a>
+                                <a class="nav-link" asp-area="" asp-controller="CoachProfile" asp-action="Details">My Profile</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Schedule" asp-action="Index">Upcoming Schedule</a>
+                                <a class="nav-link" asp-area="" asp-controller="Schedule" asp-action="Index">Upcoming Schedule</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Enrollment" asp-action="Index">Enrolled Members</a>
+                                <a class="nav-link" asp-area="" asp-controller="Enrollment" asp-action="Index">Enrolled Members</a>
                             </li>
 
                         }
@@ -67,10 +66,10 @@
                         {
                             <!-- if the user is a member, shwo a list of schedules that they can enroll, as well as a list of coache profiles -->
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Schedule" asp-action="Index">Schedule</a>
+                                <a class="nav-link" asp-area="" asp-controller="Schedule" asp-action="Index">Schedule</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="CoachProfile" asp-action="Index">Coache Profiles</a>
+                                <a class="nav-link" asp-area="" asp-controller="CoachProfile" asp-action="Index">Coache Profiles</a>
                             </li>
 
                         }
@@ -85,8 +84,8 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
+    <footer class="text-muted">
+        <div class="footer">
             &copy; 2020 - InhouseMembership - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
