@@ -93,10 +93,10 @@ namespace InhouseMembership.Controllers
             {
                 return RedirectToAction("NoProfile", "CoachProfile");
             }
-            var profileId = coachProfile.CoachProfileId;
+            
         
             // redirect to the profile page using the profile id
-            return Redirect("../../CoachProfile/Details/" + profileId);
+            return Redirect("../../CoachProfile/Details/" + coachProfile.CoachId);
         }
 
 
