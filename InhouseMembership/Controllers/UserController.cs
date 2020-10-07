@@ -91,20 +91,22 @@ namespace InhouseMembership.Controllers
             {
                 return NotFound();
             }
+           
             // get the coach profile id based on the coach id passed into the function
             CoachProfile coachProfile = _context.CoachProfiles.Where(p => p.CoachId == id).FirstOrDefault();
 
+            
             if (coachProfile == null)
             {
                 
                 return RedirectToAction("NoProfile", "CoachProfile");
 
             }
-            var profileId = coachProfile.CoachProfileId;
+         
 
 
             // redirect to the profile page using the profile id
-            return Redirect("../../CoachProfile/Details/" + profileId);
+            return Redirect("../../CoachProfile/Details/" + coachProfile.CoachId);
         }
 
 
