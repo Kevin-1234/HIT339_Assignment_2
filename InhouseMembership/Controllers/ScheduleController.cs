@@ -68,7 +68,7 @@ namespace InhouseMembership.Controllers
                 enrollment.Member = _userManager.FindByIdAsync(enrollment.MemberId).Result;
             }
 
-            
+            Console.WriteLine("enrollments: " + schedule.Enrollments);
             if (schedule == null)
             {
                 return NotFound();

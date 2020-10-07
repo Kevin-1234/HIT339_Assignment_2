@@ -40,8 +40,8 @@
 <div>
     @if (UserManager.GetRolesAsync(UserManager.FindByIdAsync(Model.Id).Result).Result.FirstOrDefault() == "Coach")
     {
-        <a asp-action="CoachProfile" asp-route-id="@Model.Id">(Click the name to see the profile >) Coach Profile</a>
+        <a asp-action="CoachProfile" asp-route-id="@Model.Id" class="btn btn-primary" style="margin-top: 20px;">View Coach Profile</a>
     }
-    <a asp-action="Edit" asp-route-id="@Model.Id" class="text-white btn-dark">Edit Profile</a>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary" style="margin-top: 20px;">Edit Your Profile</a>
 </div>
 

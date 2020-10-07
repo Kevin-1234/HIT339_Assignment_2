@@ -34,12 +34,12 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Location)
         </dd>
+
         @if (!User.IsInRole("Member"))
-        {
+        { 
             <dt class="col-sm-2 text-white">
                 Enrolled members
             </dt>
-
             <dd class="col-sm-10">
                 @foreach (Enrollment erollment in Model.Enrollments)
                 {
@@ -48,8 +48,8 @@
                 }
             </dd>
         }
-
-
+        
+        
 
 
 
@@ -59,9 +59,9 @@
                 Coach Name
             </dt>
             <!-- get the coach name by passing coach id into UserManager -->
-            <dd class="col-sm-10">
-                <a asp-action="CoachProfile" asp-route-id="@Model.CoachId" class="btn btn-primary">View Coach Profile of @Html.DisplayFor(model => UserManager.FindByIdAsync(model.CoachId).Result.UserName)</a>
-            </dd>
+    <dd class="col-sm-10">
+        <a asp-action="CoachProfile" asp-route-id="@Model.CoachId" class="btn btn-primary">View Coach Profile of @Html.DisplayFor(model => UserManager.FindByIdAsync(model.CoachId).Result.UserName)</a>
+    </dd>
         }
 
     </dl>
@@ -77,7 +77,7 @@
         else
         {
             <!-- otherwise, show enroll button -->
-            <a asp-action="CreateEnrollment" asp-route-id="@Model.ScheduleId"><h3>Enroll</h3></a>
+            <a asp-action="CreateEnrollment" asp-route-id="@Model.ScheduleId" style="margin-top: 20px;"  class="btn btn-primary"><h3>Enroll in New Schedule</h3></a>
         }
 
     }
@@ -89,8 +89,8 @@
         {
             <h3>(Event has ended!)</h3>
         }
-        <a asp-action="Edit" asp-route-id="@Model.ScheduleId" class="text-white btn-dark">Edit</a>
-        <a asp-action="Index" class="text-white btn-dark">Back to List</a>
+        <a asp-action="Edit" asp-route-id="@Model.ScheduleId" style="margin-top: 20px;" class="btn btn-primary">Edit Schedule</a>
+        <a asp-action="Index" style="margin-top: 20px;" class="btn btn-primary">Back to List</a>
     }
 
 </div>
