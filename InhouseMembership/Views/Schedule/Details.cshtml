@@ -34,17 +34,22 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Location)
         </dd>
-        <dt class="col-sm-2 text-white">
-            Enrolled members
-        </dt>
-        <dd class="col-sm-10">
-            @foreach (Enrollment erollment in Model.Enrollments)
-            {
-                <h4>@erollment.Member.UserName</h4>
+        @if (!User.IsInRole("Member"))
+        {
+            <dt class="col-sm-2 text-white">
+                Enrolled members
+            </dt>
 
-            }
-        </dd>
-        
+            <dd class="col-sm-10">
+                @foreach (Enrollment erollment in Model.Enrollments)
+                {
+                    <h4>@erollment.Member.UserName</h4>
+
+                }
+            </dd>
+        }
+
+
 
 
 
@@ -54,9 +59,9 @@
                 Coach Name
             </dt>
             <!-- get the coach name by passing coach id into UserManager -->
-    <dd class="col-sm-10">
-        <a asp-action="CoachProfile" asp-route-id="@Model.CoachId" class="btn btn-primary">View Coach Profile of @Html.DisplayFor(model => UserManager.FindByIdAsync(model.CoachId).Result.UserName)</a>
-    </dd>
+            <dd class="col-sm-10">
+                <a asp-action="CoachProfile" asp-route-id="@Model.CoachId" class="btn btn-primary">View Coach Profile of @Html.DisplayFor(model => UserManager.FindByIdAsync(model.CoachId).Result.UserName)</a>
+            </dd>
         }
 
     </dl>
