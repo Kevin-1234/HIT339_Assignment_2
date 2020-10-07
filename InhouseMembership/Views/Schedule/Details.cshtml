@@ -72,7 +72,7 @@
         else
         {
             <!-- otherwise, show enroll button -->
-            <a asp-action="CreateEnrollment" asp-route-id="@Model.ScheduleId"><h3>Enroll</h3></a>
+            <a asp-action="CreateEnrollment" asp-route-id="@Model.ScheduleId" style="margin-top: 20px;"  class="btn btn-primary"><h3>Enroll in New Schedule</h3></a>
         }
 
     }
@@ -84,8 +84,8 @@
         {
             <h3>(Event has ended!)</h3>
         }
-        <a asp-action="Edit" asp-route-id="@Model.ScheduleId" class="text-white btn-dark">Edit</a>
-        <a asp-action="Index" class="text-white btn-dark">Back to List</a>
+        <a asp-action="Edit" asp-route-id="@Model.ScheduleId" style="margin-top: 20px;" class="btn btn-primary">Edit Schedule</a>
+        <a asp-action="Index" style="margin-top: 20px;" class="btn btn-primary">Back to List</a>
     }
 
 </div>
