@@ -1,4 +1,4 @@
-﻿@model IEnumerable<InhouseMembership.Models.CoachProfile>
+﻿@model IEnumerable<InhouseMembership.Models.ApplicationUser>
 
 @{
     ViewData["Title"] = "Index";
@@ -19,17 +19,15 @@
         <thead>
             <tr>
                 <th scope="col">
-                    @Html.DisplayNameFor(model => model.Coach.UserName)
+                    @Html.DisplayNameFor(model => model.UserName)
                 </th>
                 <th scope="col">
-                    @Html.DisplayNameFor(model => model.Coach.Email)
+                    @Html.DisplayNameFor(model => model.Email)
                 </th>
                 <th scope="col">
-                    @Html.DisplayNameFor(model => model.Education)
+                    @Html.DisplayNameFor(model => model.PhoneNumber)
                 </th>
-                <th scope="col">
-                    @Html.DisplayNameFor(model => model.Experience)
-                </th>
+              
 
 
 
@@ -42,32 +40,30 @@
                 <tr>
 
                     <td scope="row">
-                        @Html.DisplayFor(modelItem => item.Coach.UserName)
+                        @Html.DisplayFor(modelItem => item.UserName)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Coach.Email)
+                        @Html.DisplayFor(modelItem => item.Email)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Education)
+                        @Html.DisplayFor(modelItem => item.PhoneNumber)
                     </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Experience)
-                    </td>
+                   
 
 
                     <!-- Admins have the options to edit delete while members can only see -->
                     @if (User.IsInRole("Admin"))
                     {
                         <td>
-                            <a asp-action="Edit" asp-route-id="@item.CoachProfileId">Edit</a> |
-                            <a asp-action="Details" asp-route-id="@item.CoachProfileId">Details</a> |
-                            <a asp-action="Delete" asp-route-id="@item.CoachProfileId">Delete</a>
+                            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
                         </td>
                     }
                     else if (User.IsInRole("Member"))
                     {
                         <td>
-                            <a asp-action="Details" asp-route-id="@item.CoachProfileId">Coach Profile</a>
+                            <a asp-action="Details" asp-route-id="@item.Id">Coach Profile</a>
                         </td>
                     }
                 </tr>
