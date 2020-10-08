@@ -69,7 +69,7 @@ namespace InhouseMembership.Controllers
   
             _context.Add(enrollment);
             await _context.SaveChangesAsync();
-            return RedirectToAction("Index", "Schedule");
+            return Redirect("../../Schedule/Details/" + enrollment.ScheduleId);
         }
 
 

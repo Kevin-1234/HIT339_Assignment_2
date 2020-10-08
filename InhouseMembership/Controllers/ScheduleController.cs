@@ -68,7 +68,7 @@ namespace InhouseMembership.Controllers
                 enrollment.Member = _userManager.FindByIdAsync(enrollment.MemberId).Result;
             }
 
-            Console.WriteLine("enrollments: " + schedule.Enrollments);
+          
             if (schedule == null)
             {
                 return NotFound();
@@ -108,15 +108,17 @@ namespace InhouseMembership.Controllers
             Random rnd = new Random();
             int randomNumber = rnd.Next();
             string strRandomNumber = randomNumber.ToString();
+            string memberId = _userManager.GetUserAsync(User).Result.Id;
             // the data will be passed to the create action in 'Enrollment' controller using TempData to create a new enrollment
             var data = new Dictionary<string, string>() {         
             {"EnrollmentId", strRandomNumber},
             {"ScheduleId", id},
-            {"MemberId", _userManager.GetUserAsync(User).Result.Id},
-            //{"Enrollments", _userManager.GetUserAsync(User).Result},
+            {"MemberId", memberId},
+                
             };
+            
             TempData["mydata"] = data;
-            //TempData["mydata"] = JsonConvert.SerializeObject(data);
+            
             return RedirectToAction("Create", "Enrollment");
 
         }

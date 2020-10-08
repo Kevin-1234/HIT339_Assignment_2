@@ -72,18 +72,22 @@
     {
         @if (Model.EventDate <= currentTime)
         {
-            <h3>(Event has ended!)</h3>
+            <h3 class="btn btn-primary">(Event has ended!)</h3>
+        }
+        else if (Model.Enrollments.Where(e => e.MemberId == UserManager.GetUserAsync(User).Result.Id).FirstOrDefault() != null)
+        { 
+            <h3 class="btn btn-primary">(You have already enrolled in this event!)</h3>
         }
         else
         {
             <!-- otherwise, show enroll button -->
             <a asp-action="CreateEnrollment" asp-route-id="@Model.ScheduleId" style="margin-top: 20px;"  class="btn btn-primary"><h3>Enroll in New Schedule</h3></a>
+            }
+
         }
 
-    }
-
-    else if (User.IsInRole("Admin"))
-    {
+        else if (User.IsInRole("Admin"))
+        {
         <!-- for an admin, give the option to edit the event -->
         @if (Model.EventDate <= currentTime)
         {
